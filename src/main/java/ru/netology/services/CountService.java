@@ -9,9 +9,11 @@ public class CountService {
         for (int month = 0; month < 12; month++) {
             if (money >= threshold) { // можем ли отдыхать?
                 count++; // увеличиваем счётчик месяцев отдыха
-                money = money - expenses-threshold/ 3 * 2;
+                money = money - expenses;
+                money = money/3;
             } else {
-                money = money + income - expenses;
+                money = money + income;
+                money = money- expenses;
 
             }
         }
